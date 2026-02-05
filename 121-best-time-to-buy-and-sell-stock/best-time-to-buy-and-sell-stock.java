@@ -5,7 +5,7 @@ class Solution {
 
         for (int i = 1; i < prices.length; i++) {
             if (prices[i] < min) {
-                min = prices[i];   // better buying price
+                min = prices[i]; 
             } else {
                 int profit = prices[i] - min;
                 if (profit > maxProfit) {
