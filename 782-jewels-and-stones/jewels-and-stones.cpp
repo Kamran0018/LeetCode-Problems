@@ -1,24 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
 class Solution {
 public:
     int numJewelsInStones(string jewels, string stones) {
-
-        int count=0;
-        for(int i=0;i<stones.length();i++)
-        {
-            for(int j=0;j<jewels.length();j++)
-            {
-                if(stones[i]==jewels[j])
-                {
-                    count++;
-                }
+        unordered_set<char> st;
+        for(char c : jewels) {
+            st.insert(c);
+        }
+        int ans = 0;
+        for(char c : stones) {
+            if(st.count(c)) {
+                ans++;
             }
         }
-
-        return count;
-
-
-
-
-        
+        return ans;
     }
 };
