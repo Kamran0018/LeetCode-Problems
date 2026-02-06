@@ -8,8 +8,8 @@ class Solution {
         {
             if(nums[i]!=val)
             {
-                nums[count]=nums[i];
-                count++;
+                nums[count++]=nums[i];
+                // count++;
             }
             
         }
