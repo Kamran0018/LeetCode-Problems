@@ -31,6 +31,11 @@ public:
             }
         }
 
-        return third == LLONG_MIN ? first : third;
+        if (third == LLONG_MIN) {
+                return first;
+            } else {
+                return third;
+            }
+
     }
 };
