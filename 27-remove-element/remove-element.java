@@ -11,7 +11,6 @@ class Solution {
                 nums[count++]=nums[i];
             }
         }
-
         return count;
         
     }
