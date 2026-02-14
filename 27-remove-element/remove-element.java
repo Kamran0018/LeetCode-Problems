@@ -9,9 +9,7 @@ class Solution {
             if(nums[i]!=val)
             {
                 nums[count++]=nums[i];
-                // count++;
             }
-            
         }
 
         return count;
