@@ -15,7 +15,5 @@ public:
             mp[psum]++;
         }
         return count;
-
-        
     }
 };
