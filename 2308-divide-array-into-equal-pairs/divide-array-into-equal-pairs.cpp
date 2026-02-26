@@ -4,8 +4,6 @@ public:
         int n=nums.size();
         unordered_map<int,int>mp;
         int s=0;
-        if(n%2==0)
-        {
             for(int i=0;i<n;i++)
             {
                 mp[nums[i]]++;
@@ -17,7 +15,6 @@ public:
                     s=1;
                 }
             }
-        }
         if(s!=1)
         {
             return true;
