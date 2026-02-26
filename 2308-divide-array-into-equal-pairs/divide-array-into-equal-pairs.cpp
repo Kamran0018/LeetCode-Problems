@@ -4,22 +4,18 @@ public:
         int n=nums.size();
         unordered_map<int,int>mp;
         int s=0;
-            for(int i=0;i<n;i++)
-            {
-                mp[nums[i]]++;
-            }
-            for(auto x:mp)
-            {
-                if(x.second %2!=0)
-                {
-                    s=1;
-                }
-            }
-        if(s!=1)
+        for(int i=0;i<n;i++)
         {
-            return true;
+            mp[nums[i]]++;
         }
-        return false;
+        for(auto x:mp)
+        {
+            if(x.second %2!=0)
+            {
+                return false;
+            }
+        }
+        return true;
         
     }
 };
