@@ -1,18 +1,22 @@
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
-        ListNode* a=NULL;
-        ListNode* b=head;
-        ListNode* c=NULL;
-
-        while(b !=NULL)
+        stack<int>s;
+        ListNode* temp=head;
+        
+        while(temp!=NULL)
         {
-            c=b->next;
-            b->next=a;
-            a=b;
-            b=c;
+            s.push(temp->val);
+            temp=temp->next;
+        };
+        temp=head;
+        while(temp!=NULL)
+        {
+            temp->val=s.top();
+            s.pop();
+            temp=temp->next;
         }
-        return a;
+        return head;
 
 
         
